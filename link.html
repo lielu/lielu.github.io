@@ -8,13 +8,21 @@
     xmlns:fb="http://www.facebook.com/2008/fbml">
 
 <body>
+		<!--script type = “text/javascript”>
+			setTimeout(function () { window.location.href = "https://play.google.com/store/apps/"; }, 2);
+			window.location.href = "imdb:///name/nm0000129";
+		</script-->
+		<script type = “text/javascript”>
+			function changeLink() {
+				setTimeout(function() {
+					var link = document.getElementById("link");
+					link.setAttribute('href', "https://play.google.com/store/apps/");
+				}, 2);			
+			}			
+			
+			</script>
+<a href="imdb:///name/nm0000129" id="link" onclick="changeLink();">
 
-
-<a href="imdb:///name/nm0000129">
-	<script type = “text/javascript”>
-		setTimeout(function () { window.location.href = "https://play.google.com/store/apps/"; }, 2);
-		window.location.href = "imdb:///name/nm0000129";
-	</script>
 	Sign In
 
 </a>
