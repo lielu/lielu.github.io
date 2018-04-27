@@ -22,7 +22,15 @@
 			
 			</script>
 <a href="imdb:///name/nm0000129" id="link" onclick="changeLink();">
-
+	<script type = “text/javascript”>
+		function changeLink() {
+			setTimeout(function() {
+				var link = document.getElementById("link");
+				link.setAttribute('href', "https://play.google.com/store/apps/");
+			}, 2);			
+		}			
+		
+		</script>
 	Sign In
 
 </a>
