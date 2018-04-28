@@ -18,7 +18,7 @@ var isAndroid = ua.indexOf("android") > -1;
 alert(isAndroid);
 if(isAndroid) { // if is android
     // your app address for local
-    var ifrSrc = 'intent://com.imdb.mobile#Intent;scheme=imdb:///name/nm0000129;action=android.intent.action.VIEW;end';
+    var ifrSrc = 'intent://com.imdb.mobile#Intent;scheme=imdb;action=android.intent.action.VIEW;end';
     var ifr = document.createElement('iframe');
     ifr.src = ifrSrc ;
     ifr.onload = function() { // if app is not installed, then will go this function
