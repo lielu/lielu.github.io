@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Intent</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb</a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -40,10 +40,11 @@
                     var t = setTimeout(function() {
                         var endTime = Date.now();
 
+						window.location = 'imdb:///name/nm0000129';
                         if (!startTime || endTime - startTime < config.timeout + 200) { 
                             //window.location = config.download_url;
                         } else {
-                            
+                            window.location = 'imdb:///name/nm0000129';
                         }
                     }, config.timeout);
 
