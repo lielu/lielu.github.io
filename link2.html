@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open IMDb View</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb </a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -22,7 +22,8 @@
                 var config = {
                     /*scheme:必须*/
                     //scheme_IOS: 'imdb://',
-                    scheme_Adr: 'intent://www.imdb.com/#Intent;scheme=imdb://www.imdb.com/;action=android.intent.action.VIEW;package=com.imdb.mobile;end',
+                    //scheme_Adr: 'intent://www.imdb.com/#Intent;scheme=imdb://www.imdb.com/;action=android.intent.action.VIEW;package=com.imdb.mobile;end',
+					scheme_Adr: 'imdb://www.imdb.com/name/nm0000129',
                     download_url: document.getElementById('J-download-app').value,
                     timeout: 600
                 };
