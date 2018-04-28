@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open App</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb</a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -21,8 +21,8 @@
                 var t;
                 var config = {
                     /*scheme:必须*/
-                    scheme_IOS: 'imdb://',
-                    scheme_Adr: 'imdb://',
+                    //scheme_IOS: 'imdb://',
+                    scheme_Adr: 'imdb:///name/nm0000129',
                     download_url: document.getElementById('J-download-app').value,
                     timeout: 600
                 };
@@ -33,7 +33,7 @@
                     var ifr = document.createElement('iframe');
 
 
-                    ifr.src = ua.indexOf('os') > 0 ? config.scheme_IOS : config.scheme_Adr;
+                    ifr.src = /*ua.indexOf('os') > 0 ? config.scheme_IOS : */ config.scheme_Adr;
                     ifr.style.display = 'none';
                     document.body.appendChild(ifr);
 
