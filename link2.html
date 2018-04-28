@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Intent 6000</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Intent intent</a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -22,9 +22,9 @@
                 var config = {
                     /*scheme:必须*/
                     //scheme_IOS: 'imdb://',
-                    scheme_Adr: 'imdb://www.imdb.com/name/nm0000129',
+                    scheme_Adr: 'intent://www.imdb.com/#Intent;scheme=imdb:///name/nm0000129;package=com.imdb.mobile;end',
                     download_url: document.getElementById('J-download-app').value,
-                    timeout: 6000
+                    timeout: 600
                 };
 
                 function openclient() {
@@ -60,3 +60,6 @@
         </script>
     </body>
 </html>
+
+
+<iframe id="plugIn_downloadAppPlugIn_loadIframe" src="intent://m.jd.com/#Intent;scheme=openapp.jdmobile://virtual?params={&quot;category&quot;:&quot;jump&quot;,&quot;des&quot;:&quot;HomePage&quot;,&quot;sourceType&quot;:&quot;JSHOP_SOURCE_TYPE&quot;,&quot;sourceValue&quot;:&quot;JSHOP_SOURCE_VALUE&quot;,&quot;M_sourceFrom&quot;:&quot;index&quot;,&quot;msf_type&quot;:&quot;auto&quot;,&quot;m_param&quot;:{&quot;m_source&quot;:&quot;0&quot;,&quot;event_series&quot;:{},&quot;jda&quot;:&quot;122270672.15248943481811358328769.1524894348.1524894348.1524894348.1&quot;,&quot;usc&quot;:&quot;direct&quot;,&quot;ucp&quot;:&quot;-&quot;,&quot;umd&quot;:&quot;none&quot;,&quot;utr&quot;:&quot;-&quot;,&quot;jdv&quot;:&quot;122270672%7Cdirect%7C-%7Cnone%7C-%7C1524894348182&quot;,&quot;ref&quot;:&quot;http%3A%2F%2Fm.jd.com%2F&quot;,&quot;psn&quot;:&quot;15248943481811358328769|1&quot;,&quot;psq&quot;:1,&quot;unpl&quot;:&quot;&quot;,&quot;pc_source&quot;:&quot;&quot;,&quot;mba_muid&quot;:&quot;15248943481811358328769&quot;,&quot;mba_sid&quot;:&quot;15248943481842704829464681812&quot;,&quot;mt_xid&quot;:&quot;&quot;,&quot;mt_subsite&quot;:&quot;&quot;},&quot;SE&quot;:{&quot;mt_subsite&quot;:&quot;&quot;,&quot;__jdv&quot;:&quot;122270672%7Cdirect%7C-%7Cnone%7C-%7C1524894348182&quot;,&quot;unpl&quot;:&quot;&quot;,&quot;__jda&quot;:&quot;122270672.15248943481811358328769.1524894348.1524894348.1524894348.1&quot;}};package=com.jingdong.app.mall;end" style="display: none; width: 0px; height: 0px;"></iframe>
