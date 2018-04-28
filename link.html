@@ -13,24 +13,27 @@
 			window.location.href = "imdb:///name/nm0000129";
 		</script-->
 		<script type = “text/javascript”>
-			function changeLink() {
-				setTimeout(function() {
-					var link = document.getElementById("link");
-					link.setAttribute('href', "https://play.google.com/store/apps/");
-				}, 2);			
-			}			
-			
+			var ua = navigator.userAgent.toLowerCase();
+var isAndroid = ua.indexOf("android") > -1;
+if(isAndroid) { // if is android
+    // your app address for local
+    var ifrSrc = 'intent://com.imdb.mobile#Intent;scheme=imdb:///name/nm0000129;action=android.intent.action.VIEW;end';
+    var ifr = document.createElement('iframe');
+    ifr.src = ifrSrc ;
+    ifr.onload = function() { // if app is not installed, then will go this function
+        window.location = 'https://play.google.com/store/apps/';
+    };
+    ifr.style.display = 'none';
+    document.body.appendChild(ifr);
+
+    setTimeout(function(){
+        document.body.removeChild(ifr); // remove the iframe element
+    }, 1000);
+} else { // if is not android
+    window.location = 'http://imdb.com';
+}
 			</script>
-<a href="imdb:///name/nm0000129" id="link" onclick="changeLink();">
-	<script type = “text/javascript”>
-		function changeLink() {
-			setTimeout(function() {
-				var link = document.getElementById("link");
-				link.setAttribute('href', "https://play.google.com/store/apps/");
-			}, 2);			
-		}			
-		
-		</script>
+<a href="imdb:///name/nm0000129" id="link">
 	Sign In
 
 </a>
