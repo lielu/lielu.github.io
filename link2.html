@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Intent intent</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Intent</a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -33,7 +33,7 @@
                     var ifr = document.createElement('iframe');
 
 
-                    ifr.src = /*ua.indexOf('os') > 0 ? config.scheme_IOS : */ config.scheme_Adr;
+                    ifr.src = config.scheme_Adr; /*ua.indexOf('os') > 0 ? config.scheme_IOS : */ 
                     ifr.style.display = 'none';
                     document.body.appendChild(ifr);
 
