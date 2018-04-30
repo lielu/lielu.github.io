@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Remove</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb 1000</a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -25,28 +25,32 @@
                     //scheme_Adr: 'intent://www.imdb.com/#Intent;scheme=imdb://www.imdb.com/find;action=android.intent.action.VIEW;package=com.imdb.mobile;end',
 					scheme_Adr: 'imdb://www.imdb.com/name/nm0000129',
                     download_url: document.getElementById('J-download-app').value,
-                    timeout: 600
+                    timeout: 1000
                 };
 
                 function openclient() {
-                    var startTime = Date.now();
+                    //var startTime = Date.now();
 
                     var ifr = document.createElement('iframe');
 
 
                     ifr.src = config.scheme_Adr; /*ua.indexOf('os') > 0 ? config.scheme_IOS : */ 
                     ifr.style.display = 'none';
+					ifr.onload = function() { // if app is not installed, then will go this function
+        				window.location = config.download_url;
+    				};
+    				ifr.style.display = 'none';
                     document.body.appendChild(ifr);
 
                     var t = setTimeout(function() {
-                        var endTime = Date.now();
+                        //var endTime = Date.now();
 
 						// window.location = 'imdb:///name/nm0000129';
-                        if (!startTime || endTime - startTime < config.timeout + 200) { 
-                            window.location = config.download_url;
-                        } else {
+                        //if (!startTime || endTime - startTime < config.timeout + 200) { 
+                            //window.location = config.download_url;
+                        //} else {
                             //window.location = 'imdb:///name/nm0000129';
-                        }
+                        //}
 
 						document.body.removeChild(ifr); 
                     }, config.timeout);
