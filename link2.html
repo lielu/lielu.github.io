@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Play</a>
+            <a id="J-call-app" href="javascript:;" class="label">Open IMDb Remove</a>
             <input id="J-download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -57,6 +57,8 @@
                     window.onblur = function() {
                         clearTimeout(t);
                     }
+
+					document.getElementById("J-call-app").remove();
                 }
                 window.addEventListener("DOMContentLoaded", function(){
                     document.getElementById("J-call-app").addEventListener('click',openclient,false);
