@@ -11,7 +11,7 @@
     </head>
     <body>
         <div>
-            <a id="Call-app" href="javascript:;" class="label">Tom Cruise: Open IMDb App</a>
+            <a id="Call-app" href="javascript:;" class="label">Tom Cruise: Open App</a>
             <input id="Download-app" type="hidden" name="storeurl" value="market://details?id=com.imdb.mobile">
         </div>
 
@@ -20,7 +20,8 @@
                 var ua = navigator.userAgent.toLowerCase();
                 var t;
                 var config = {
-                    scheme_Adr: 'intent://www.imdb.com/name/nm0000129#Intent;scheme=imdb;action=android.intent.action.VIEW;package=com.imdb.mobile;end',
+					//scheme_Adr: 'intent://www.imdb.com/name/nm0000129#Intent;scheme=imdb;action=android.intent.action.VIEW;package=com.imdb.mobile;end',
+					scheme_Adr: 'imdb://www.imdb.com/name/nm0000129',
                     download_url: document.getElementById('Download-app').value,
                     timeout: 600
                 };
