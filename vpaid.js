@@ -292,6 +292,7 @@ VpaidVideoPlayer.prototype.initAd = function(
  * Called by the video element. Calls events as the video reaches times.
  */
 VpaidVideoPlayer.prototype.timeUpdateHandler_ = function() {
+	this.attributes_['remainingTime'] = this.videoSlot_.duration - this.videoSlot_.currentTime;
 	this.callEvent_('AdRemainingTimeChange');
 	if (this.lastQuartileIndex_ >= this.quartileEvents_.length) {
         return;
