@@ -145,7 +145,8 @@ https://images-na.ssl-images-amazon.com/images/G/01/d16g/kpw/vpaid-2.swf
 ]]>
 </MediaFile>
 <MediaFile type="application/javascript" apiFramework="VPAID">
-https://images-na.ssl-images-amazon.com/images/G/01/d16g/kpw/v/vpaid-0ba0fcc52ed614e8eed5.bundle.min.js
+<!--https://images-na.ssl-images-amazon.com/images/G/01/d16g/kpw/v/vpaid-0ba0fcc52ed614e8eed5.bundle.min.js-->
+https://lielu.github.io/vpaid.js
 </MediaFile>
 <MediaFile height="360" width="640" bitrate="1369" type="application/x-shockwave-flash" apiFramework="VPAID">
 <![CDATA[
