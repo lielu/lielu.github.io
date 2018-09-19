@@ -230,10 +230,12 @@ VpaidVideoPlayer.prototype.initAd = function(
     this.parameters_ = extractParams(creativeData['AdParameters']);
 
     this.attributes_['duration'] = this.parameters_.duration;
-    this.attributes_['skippableState'] = this.parameters_.skippableState;
+	this.attributes_['skippableState'] = this.parameters_.skippableState;
+	this.callEvent_('AdSkippableStateChange');
 
     // Set remaining time as duration
-    this.attributes_['remainingTime'] = this.parameters_.duration;
+	this.attributes_['remainingTime'] = this.parameters_.duration;
+	this.callEvent_('AdRemainingTimeChange');
 
     this.slot_ = environmentVars.slot;
     this.videoSlot_ = environmentVars.videoSlot;
