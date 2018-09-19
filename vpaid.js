@@ -292,7 +292,8 @@ VpaidVideoPlayer.prototype.initAd = function(
  * Called by the video element. Calls events as the video reaches times.
  */
 VpaidVideoPlayer.prototype.timeUpdateHandler_ = function() {
-    if (this.lastQuartileIndex_ >= this.quartileEvents_.length) {
+	this.callEvent_('AdRemainingTimeChange');
+	if (this.lastQuartileIndex_ >= this.quartileEvents_.length) {
         return;
     }
     var percentPlayed = this.videoSlot_.currentTime * 100.0 / this.videoSlot_.duration;
